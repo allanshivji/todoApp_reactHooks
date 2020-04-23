@@ -18,8 +18,8 @@ const App = () => {
             </Typography>
             <TodoForm saveTodo={todoText => {
                 const trimmed = todoText.trim();
-                if (trimmed.trim().length > 0) {
-                    addTodo([...todos, trimmed])
+                if (trimmed.length > 0) {
+                    addTodo(trimmed)
                 }
             }} />
             <TodoList todos={todos} deleteTodo={deleteTodo} />
